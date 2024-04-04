@@ -1,0 +1,6 @@
+<div class="relative flex items-center px-4 py-3 space-x-2 gap-4 rounded-lg border <%= color_classes %>" role='alert'>
+  <strong class='font-bold'><%= message %></strong>
+  <button type="button" data-action="click->flash_message--component#close">
+    <%= heroicon 'x-mark', options: { class: 'w-6 h-6 fill-current' } %>
+  </button>
+</div>

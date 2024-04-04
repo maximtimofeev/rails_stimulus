@@ -1,0 +1,33 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+ul,
+nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+em {
+  font-style: italic;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

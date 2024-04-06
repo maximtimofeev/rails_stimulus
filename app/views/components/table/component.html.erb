@@ -1,0 +1,21 @@
+
+
+<table class="border-collapse w-full">
+  <% @columns.each do |column| %>
+    <th class="border border-solid border-black p-2"><%= column.label %></th>
+  <% end %>
+  <% @data.each do |row| %>
+    <tr>
+      <% @columns.each do |column| %>
+        <td
+          class="border border-solid border-black p-2"
+          style="width: <%= column.static_size %>"
+        >
+          <%= view_context.capture(row, &column.td_block) %>
+          <%# the capture ensures, that we do not only return the return of the block, but all the html from the block, see below %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+

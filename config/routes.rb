@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
     get '/' => 'home#index'
 
+    resources :users, except: :show
+    resources :articles, except: :show
+
     match '*unmatched', to: 'application#not_found', via: :all
   end
 

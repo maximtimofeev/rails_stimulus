@@ -4,7 +4,7 @@ class Admin::SessionsController < Devise::SessionsController
   before_action :sign_in_params, only: :create
   before_action :load_user, only: :create
 
-  layout 'admin/base'
+  layout 'admin/login'
 
   # GET /admin/login
   def new

@@ -5,6 +5,7 @@ class Admin::ApplicationController < ::ApplicationController
   layout 'admin/base'
 
   def not_found
+    render 'admin/not_found', status: 404
   end
 
   def current_user

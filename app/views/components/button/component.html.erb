@@ -1,1 +1,7 @@
-<%= button_to text, url, method: method, class: "flex rounded-md border border solid border-purple-500 h-8" %>
+<div class="<%= container_classes%>">
+  <% if method.present? %>
+    <%= button_to text, url, method: method, class: "" %>
+  <% else %>
+    <%= link_to text, url, class: "" %>
+  <% end %>
+</div>

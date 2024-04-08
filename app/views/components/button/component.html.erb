@@ -1,6 +1,8 @@
 <div class="<%= container_classes%>">
   <% if method.present? %>
     <%= button_to text, url, method: method, class: "" %>
+  <% elsif type === :submit %>
+    <%= button_tag text, type: type %>
   <% else %>
     <%= link_to text, url, class: "" %>
   <% end %>

@@ -3,7 +3,7 @@
 class Button::Component < ApplicationViewComponent
   option :text
   option :type
-  option :url
+  option :url, optional: true
   option :method, optional: true
 
   def container_classes
@@ -18,6 +18,8 @@ class Button::Component < ApplicationViewComponent
     when :danger
       classes + "bg-red-400 hover:bg-red-500 "
     when :button
+      classes + 'bg-gray-200 hover:bg-gray-300'
+    when :submit
       classes + 'bg-gray-200 hover:bg-gray-300'
     else
       classes

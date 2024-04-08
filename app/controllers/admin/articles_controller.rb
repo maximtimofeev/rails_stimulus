@@ -43,7 +43,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   def article_params
     params.required(:article).permit(
-      :title, :description
+      :title, :description, :content
     )
   end
 end
